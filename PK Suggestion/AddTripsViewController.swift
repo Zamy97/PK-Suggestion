@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AddTripsViewController.swift
 //  PK Suggestion
 //
 //  Created by Akhtar zaman on 7/26/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AddTripsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

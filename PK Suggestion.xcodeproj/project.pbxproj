@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		25588D23210A83110090AB52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25588D22210A83110090AB52 /* AppDelegate.swift */; };
-		25588D25210A83110090AB52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25588D24210A83110090AB52 /* ViewController.swift */; };
+		25588D25210A83110090AB52 /* AddTripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25588D24210A83110090AB52 /* AddTripsViewController.swift */; };
 		25588D28210A83110090AB52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25588D26210A83110090AB52 /* Main.storyboard */; };
 		25588D2B210A83110090AB52 /* PK_Suggestion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25588D29210A83110090AB52 /* PK_Suggestion.xcdatamodeld */; };
 		25588D2D210A83120090AB52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25588D2C210A83120090AB52 /* Assets.xcassets */; };
 		25588D30210A83120090AB52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25588D2E210A83120090AB52 /* LaunchScreen.storyboard */; };
+		25588D38210A87C10090AB52 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25588D37210A87C10090AB52 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		25588D1F210A83110090AB52 /* PK Suggestion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PK Suggestion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25588D22210A83110090AB52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		25588D24210A83110090AB52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		25588D24210A83110090AB52 /* AddTripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripsViewController.swift; sourceTree = "<group>"; };
 		25588D27210A83110090AB52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		25588D2A210A83110090AB52 /* PK_Suggestion.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PK_Suggestion.xcdatamodel; sourceTree = "<group>"; };
 		25588D2C210A83120090AB52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25588D2F210A83120090AB52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25588D31210A83120090AB52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25588D37210A87C10090AB52 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				25588D22210A83110090AB52 /* AppDelegate.swift */,
-				25588D24210A83110090AB52 /* ViewController.swift */,
+				25588D24210A83110090AB52 /* AddTripsViewController.swift */,
+				25588D37210A87C10090AB52 /* SecondViewController.swift */,
 				25588D26210A83110090AB52 /* Main.storyboard */,
 				25588D2C210A83120090AB52 /* Assets.xcassets */,
 				25588D2E210A83120090AB52 /* LaunchScreen.storyboard */,
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25588D38210A87C10090AB52 /* SecondViewController.swift in Sources */,
 				25588D2B210A83110090AB52 /* PK_Suggestion.xcdatamodeld in Sources */,
-				25588D25210A83110090AB52 /* ViewController.swift in Sources */,
+				25588D25210A83110090AB52 /* AddTripsViewController.swift in Sources */,
 				25588D23210A83110090AB52 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

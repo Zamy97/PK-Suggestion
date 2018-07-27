@@ -28,6 +28,9 @@
                                 <rect key="frame" x="16" y="216" width="343" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Add your Trips"/>
+                                <connections>
+                                    <segue destination="sXh-Hg-kMm" kind="show" id="BOz-gj-LUi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.61992660662702459" blue="0.70757118863033153" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -46,7 +49,7 @@
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Ib Calendar Data Source-->
         <scene sceneID="zkX-bY-Cju">
             <objects>
                 <viewController id="sXh-Hg-kMm" customClass="SecondViewController" customModule="PK_Suggestion" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,6 +69,53 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ges-Sc-ZHk" customClass="JTAppleCalendarView">
+                                <rect key="frame" x="0.0" y="155" width="375" height="340"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.6786894243160857" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Jym-J2-i39">
+                                    <size key="itemSize" width="121" height="118"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PGs-I1-pfb" customClass="CustomCell" customModule="PK_Suggestion" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="118"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="121" height="118"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eES-af-f65">
+                                                    <rect key="frame" x="39" y="49" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="eES-af-f65" firstAttribute="centerY" secondItem="PGs-I1-pfb" secondAttribute="centerY" id="OQl-zt-dfW"/>
+                                            <constraint firstItem="eES-af-f65" firstAttribute="centerX" secondItem="PGs-I1-pfb" secondAttribute="centerX" id="UL0-3s-jOY"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="eES-af-f65" id="Azr-B4-1z6"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="ibCalendarDataSource" destination="sXh-Hg-kMm" id="zY0-c4-mNR"/>
+                                    <outlet property="ibCalendarDelegate" destination="sXh-Hg-kMm" id="w6H-vB-fkS"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick Your Dates:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jey-op-WdS">
+                                <rect key="frame" x="16" y="117" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.39271516791157834" green="0.94272579066688644" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>

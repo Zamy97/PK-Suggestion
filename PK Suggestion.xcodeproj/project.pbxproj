@@ -14,9 +14,12 @@
 		25588D2D210A83120090AB52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25588D2C210A83120090AB52 /* Assets.xcassets */; };
 		25588D30210A83120090AB52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25588D2E210A83120090AB52 /* LaunchScreen.storyboard */; };
 		25588D38210A87C10090AB52 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25588D37210A87C10090AB52 /* SecondViewController.swift */; };
+		25588D3C210A9D9B0090AB52 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25588D3B210A9D9B0090AB52 /* CustomCell.swift */; };
+		6FD99A8C7536E6A0468A704F /* Pods_PK_Suggestion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B24EFC6913DCBCD8B43E1B45 /* Pods_PK_Suggestion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07D48A4042835D3152D837BF /* Pods-PK Suggestion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PK Suggestion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PK Suggestion/Pods-PK Suggestion.debug.xcconfig"; sourceTree = "<group>"; };
 		25588D1F210A83110090AB52 /* PK Suggestion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PK Suggestion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25588D22210A83110090AB52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25588D24210A83110090AB52 /* AddTripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripsViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +29,9 @@
 		25588D2F210A83120090AB52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25588D31210A83120090AB52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25588D37210A87C10090AB52 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		25588D3B210A9D9B0090AB52 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		B24EFC6913DCBCD8B43E1B45 /* Pods_PK_Suggestion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PK_Suggestion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6ACA1E0BF0404B86BDEB2D0 /* Pods-PK Suggestion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PK Suggestion.release.xcconfig"; path = "Pods/Target Support Files/Pods-PK Suggestion/Pods-PK Suggestion.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FD99A8C7536E6A0468A704F /* Pods_PK_Suggestion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +51,8 @@
 			children = (
 				25588D21210A83110090AB52 /* PK Suggestion */,
 				25588D20210A83110090AB52 /* Products */,
+				397F599ED955408B82E3D61A /* Pods */,
+				5C4E0A342A55C8B319C86553 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,8 +75,26 @@
 				25588D2E210A83120090AB52 /* LaunchScreen.storyboard */,
 				25588D31210A83120090AB52 /* Info.plist */,
 				25588D29210A83110090AB52 /* PK_Suggestion.xcdatamodeld */,
+				25588D3B210A9D9B0090AB52 /* CustomCell.swift */,
 			);
 			path = "PK Suggestion";
+			sourceTree = "<group>";
+		};
+		397F599ED955408B82E3D61A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07D48A4042835D3152D837BF /* Pods-PK Suggestion.debug.xcconfig */,
+				F6ACA1E0BF0404B86BDEB2D0 /* Pods-PK Suggestion.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5C4E0A342A55C8B319C86553 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B24EFC6913DCBCD8B43E1B45 /* Pods_PK_Suggestion.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25588D34210A83120090AB52 /* Build configuration list for PBXNativeTarget "PK Suggestion" */;
 			buildPhases = (
+				E9849B7071C81FD9FE04F24F /* [CP] Check Pods Manifest.lock */,
 				25588D1B210A83110090AB52 /* Sources */,
 				25588D1C210A83110090AB52 /* Frameworks */,
 				25588D1D210A83110090AB52 /* Resources */,
+				2E8F48A00B990DA4F1ECAB3B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +165,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2E8F48A00B990DA4F1ECAB3B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PK Suggestion/Pods-PK Suggestion-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PK Suggestion/Pods-PK Suggestion-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9849B7071C81FD9FE04F24F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PK Suggestion-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		25588D1B210A83110090AB52 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -143,6 +211,7 @@
 			files = (
 				25588D38210A87C10090AB52 /* SecondViewController.swift in Sources */,
 				25588D2B210A83110090AB52 /* PK_Suggestion.xcdatamodeld in Sources */,
+				25588D3C210A9D9B0090AB52 /* CustomCell.swift in Sources */,
 				25588D25210A83110090AB52 /* AddTripsViewController.swift in Sources */,
 				25588D23210A83110090AB52 /* AppDelegate.swift in Sources */,
 			);
@@ -286,6 +355,7 @@
 		};
 		25588D35210A83120090AB52 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07D48A4042835D3152D837BF /* Pods-PK Suggestion.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +374,7 @@
 		};
 		25588D36210A83120090AB52 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6ACA1E0BF0404B86BDEB2D0 /* Pods-PK Suggestion.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

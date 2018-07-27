@@ -12,6 +12,10 @@ import JTAppleCalendar
 
 
 class AddTripsViewController: UIViewController {
+    
+    @IBAction func AddTripsButton(_ sender: UIButton) {
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

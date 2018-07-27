@@ -38,14 +38,7 @@ class SecondViewController: UIViewController {
 }
 
 extension SecondViewController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource {
-    func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
-        // This function should have the same code as the cellForItemAt function
-        let myCustomCell = cell as! CellView
-        sharedFunctionToConfigureCell(myCustomCell: myCustomCell, cellState: cellState, date: date)
     
-    }
-    
-  
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         formatter.dateFormat = "yyyy MM dd"
         formatter.timeZone = Calendar.current.timeZone
@@ -54,17 +47,74 @@ extension SecondViewController: JTAppleCalendarViewDelegate, JTAppleCalendarView
         let startDate = formatter.date(from: "2017 01 01")!
         let endDate = formatter.date(from: "2018 12 31")!
         
-  
+        
+        
+        
+        
         let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
         return parameters
     }
-    
-    func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
-        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
-        cell.dateLabel.text = cellState.text
-        
-        return cell
+
+    func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
+        // This function should have the same code as the cellForItemAt function
+        let myCustomCell = cell as! CustomCell
+        sharedFunctionToConfigureCell(myCustomCell: myCustomCell, cellState: cellState, date: date)
     }
     
-}
+    func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
+        let myCustomCell = calendar.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
+        sharedFunctionToConfigureCell(myCustomCell: myCustomCell, cellState: cellState, date: date)
+        return myCustomCell
+    }
+    
+    func sharedFunctionToConfigureCell(myCustomCell: CustomCell, cellState: CellState, date: Date) {
+        
+        
+    }
+//        myCustomCell.dayLabel.text = cellState.text
+//        if testCalendar.isDateInToday(date) {
+//            myCustomCell.backgroundColor = red
+//        } else {
+//            myCustomCell.backgroundColor = white
+//        }
+        // more code configurations
+        // ...
+        // ...
+        // ...
+    }
+    
+    
+  
+//    func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
+//        formatter.dateFormat = "yyyy MM dd"
+//        formatter.timeZone = Calendar.current.timeZone
+//        formatter.locale = Calendar.current.locale
+//
+//        let startDate = formatter.date(from: "2017 01 01")!
+//        let endDate = formatter.date(from: "2018 12 31")!
+//
+//
+//
+//
+//
+//        let parameters = ConfigurationParameters(startDate: startDate, endDate: endDate)
+//        return parameters
+//    }
+    
+//    func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
+//        let myCustomCell = calendar.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
+//        self.calendar(calendar, willDisplay: myCustomCell, forItemAt: date, cellState: cellState, indexPath: indexPath)
+//        return myCustomCell
+//    }
+//
+//
+//
+////    func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
+////        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
+////        cell.dateLabel.text = cellState.text
+////
+//        return cell
+//    }
+    
+
 
